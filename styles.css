@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.box1 button{
+    padding: 10PX 10PX;
+    border-radius: 50px;
+    float:right;
+}
+.verificarBtn {
+    background-color: #4D8495;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.verificarBtn:hover {
+    background-color: #4D8495;
+}
+.box_e {
+    justify-content: center; 
+    flex-direction: column;
+    margin: auto;
+}
+.contenedor-boxes {
+    display: flex;
+    justify-content: space-between;
+}
+.box1{
+    border: 5px solid #106EBE;
+    background: #B5B4B4;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+.tex{
+    text-align: center;
+    margin: auto;
+}
+.hora{
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.box2 {
+    border: 5px solid #106EBE;
+    background: #B5B4B4;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+.texto {
+    text-align: center;
+    margin: auto;
+}
+.box3 {
+    background: #106EBE;
+    width: 45%;
+    padding: 20px;
+    border: 5px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.inicio, .box1, .box2, .titulo, .contenedor-boxes, .loginForm {
+    margin-bottom: 20px;
+}
+.box5 {
+    padding: 50px 150px;
+    margin-bottom: 20px;
+    border: 5px solid #ccc;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.78);
+}
+.box4 {
+    background: #106EBE;
+    width: 45%;
+    padding: 20px;
+    border: 5px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.caja1, .caja2, .caja3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .cuadro1, .cuadro2, .cuadro3 {
+    margin-top: 10px;
+}
+.caja4, .caja5, .caja6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .cuadro4, .cuadro5, .cuadro6 {
+    margin-top: 10px;
+}
+.titulo {
+    text-align: center;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 133, 255, 0.82) 0%, rgba(230, 232, 233, 0.82) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.titulo2{
+    border-color: #B01717;
+}
+.inicio{
+    border: #fff;
+}
+.Bienvenido{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+    border: 1px solid #000;
+    background: linear-gradient(180deg, rgba(26, 33, 70, 0.82) 0%, rgba(3, 210, 255, 0.82) 100%, rgba(3, 210, 255, 0.82) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.datos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 30px;
+}
+.datos2{
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    text-align: center;
+    padding: 100px 30px;
+}
+.datos3{
+    display: flex;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    text-align: center;
+    flex-direction:column;
+    background:#B5B4B4;
+    border-radius: 16px;
+    padding: 100px 30px;
+}
+.img_doc{
+    float: left;
+    margin: 10px;
+}
+.logueo {
+    display: flex;
+    text-align:center;
+    padding: 0px 30px;
+}
+
+form .title {
+    color: #252525;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+form label {
+    margin-bottom: 35px;
+}
+
+
+form label .fa-solid {
+    font-size: 20px;
+    color:#000;
+    margin-right: 10px;
+}
+
+form label input {
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: solid 1px #000;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+form label input::placeholder {
+    color: rgba(37, 37, 37, 0.5);
+}
+
+
+form .link {
+    color: #252525;
+    margin-bottom: 15px;
+}
+
+.logueo img {
+    margin-right: 45px; /* Agrega un margen derecho de 10px entre las imágenes */
+}
+.loginForm{
+    color: #fff;
+    border: none;
+    background: linear-gradient(to right, #010101, #000000);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* new css */
+.horarios-body,
+.registro-body,
+.frame3-body,
+.frame4-body{
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.bottom-buttons{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.bottom-buttons a .fa-round {
+    background: #0085FF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 1.9;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+.horarios-body .top-text,
+.fram3-content .flex-top .top-text,
+.fram4-content .top-text {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    color: #FFF;
+    max-width: 480px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.fram4-content .flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4%;
+    max-width: 1250px;
+    margin: auto;
+}
+.fram4-content .flex-box .flex-col{
+    display: flex;
+    padding: 17px 30px 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px solid #F1DEAC;
+    background: #F1DEAC;
+    width: 48%;
+    flex: 0 0 48%;
+    margin-bottom: 20px;
+    max-width: 550px;
+    cursor: pointer;
+}
+.fram4-content .flex-box .flex-col.active{
+    border: 5px solid #bd911e;
+}
+.fram4-content .flex-box .flex-col .title{
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    width: 400px;
+    margin: 0px;
+}
+
+.frame3-body{
+    display: block;
+}
+
+.fram3-content .flex-bottom,
+.fram3-content .flex-top{
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+}
+.fram3-content .flex-top .heading{
+    color: #FA5741;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.fram3-content .flex-top .top-text{
+    max-width: 480px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.fram3-content .select-content{
+    max-width: 370px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+.fram3-content .select-content select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 8px;
+    background: #FFF;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 21px;
+}
+.fram3-content .select-content .select-div{
+    position: relative;
+}
+.fram3-content .select-content .select-div::before{
+    content: "\f078";
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-family: var(--fa-style-family,"Font Awesome 6 Free");
+    font-weight: var(--fa-style,900);
+}
+.fram3-content .flex-bottom{
+    flex-wrap: wrap;
+}
+.fram3-content .flex-bottom .flex-col {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.10);
+    padding: 15px 10px 10px;
+    text-align: center;
+    max-width: 200px;
+    flex: 0 0 200px;
+}
+.fram3-content .flex-bottom .flex-col .title{
+    color: #6E6E6E;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px;
+}
+
+.registro-body .box5{
+    border: 0px;
+}
+.registro-body h1.cuadro4{
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 16px;
+    margin-bottom: 38px;
+}
+.registro-body .flex-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    max-width: 400px;
+    margin: auto;
+}
+.registro-body .flex-center .flex-col{
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 16px;
+    max-width: 234px;
+    flex: 0 0 234px;
+}
+.registro-body .flex-center .flex-col.flex-col1{
+    max-width: 120px;
+    flex: 0 0 120px;
+}
+.registro-body .flex-center .flex-col.flex-col1 .tex{
+    text-align: left;
+}
+.registro-body .flex-center .flex-col input{
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 16px;
+    background-color: transparent;
+    border: 0px;
+    width: 100%;
+    height: 18px;
+}
+.registro-body .flex-center .flex-col2{
+    position: relative;
+}
+.registro-body .flex-center .flex-col2::before{
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1000;
+}
+.registro-body .verificarBtn{
+    border-radius: 20px;
+    padding: 10px 28px;
+}
+.registro-body .btn-guardar{
+    color: #381E72;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; 
+    border-radius: 100px;
+    background: #0094FF;
+    padding: 15px 18px 13px;
+}
+
+.horarios-body .top-text{
+    max-width: unset;
+    margin-bottom: 12px;
+}
+.horarios-body .box4,
+.horarios-body .box3,
+.horarios-body .box2,
+.horarios-body .box1{
+    border: 0px;
+}
+.horarios-body h2.tex{
+    color: #B01717;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+.horarios-body .texto,
+.horarios-body p.tex {
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+.horarios-body .box1 {
+    max-width: 580px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.horarios-body .box1 p.tex {
+    font-size: 12px;
+}
+.horarios-body .titulo {color: #FFFCFC;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.horarios-body .box2 {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.horarios-body .box2 .texto{
+    margin-top: 6px;
+}
+.horarios-body .box2 input{
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background: #FFF;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #000;
+}
+.horarios-body .box2 input[type="date"]::-webkit-inner-spin-button,
+.horarios-body .box2 input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.horarios-body .box3 {
+    padding: 30px 20px;
+    width: 480px;
+    max-width: 100%;
+    margin: auto;
+}
+.horarios-body .box3 .flex-time-box{
+    border-radius: 16px;
+    border: 2px solid #D9D9D9;
+    background: #D9D9D9;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.horarios-body .box3 .flex-time-box:last-child{
+    margin-bottom: 0px;
+}
+.horarios-body .box3 .flex-time-box .flex-col{
+    width: calc(100% - 60px);
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.horarios-body .box3 .flex-time-box .flex-col input{
+    background: transparent;
+    border: 0px;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.horarios-body .box3 input[type="time"]::-webkit-inner-spin-button,
+.horarios-body .box3 input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+@media screen and (max-width:767px) {
+    .fram4-content .flex-box{
+        display: block;
+    }
+    .fram4-content .flex-box .flex-col{
+        width: 100%;
+    }
+    .bottom-buttons{
+        padding: 0px 20px;
+    }
+    .fram3-content .flex-top{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .fram3-content .select-content{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .fram3-content .flex-bottom{
+        justify-content: center;
+    }
+    .registro-body,
+    .registro-body .box5{
+        padding: 20px;
+    }
+    .registro-body .flex-center{
+        display: block;
+    }
+    .registro-body .flex-center .flex-col{
+        margin-bottom: 14px;
+        max-width: 100% !important;
+        width: 300px !important; 
+    }
+    /* .registro-body .flex-center .flex-col .tex{
+        text-align: center !important;
+    } */
+}

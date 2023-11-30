@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDA SALUDABLE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="frame4-body">
+    <form action="" class="frame4-form">
+        <div class="fram4-content">
+            <div class="top-text">
+                Seleccione su area donde desea agendar su cita 
+            </div>
+            <div class="flex-box">
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/1.png"></div>
+                    <div class="title">Oftalmologia</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/2.png"></div>
+                    <div class="title">Obstetricia</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/3.png"></div>
+                    <div class="title">Cardiologia</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/4.png"></div>
+                    <div class="title">Traumatologia</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/5.png"></div>
+                    <div class="title">Medicina general</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/6.png"></div>
+                    <div class="title">Dermatologia</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/7.png"></div>
+                    <div class="title">Cirugia general</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame4/8.png"></div>
+                    <div class="title">Otros</div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="bottom-buttons">
+        <a class="" href="frame3.html"> <i class="fa fa-arrow-left fa-round"></i> &nbsp;&nbsp;&nbsp;Atras</a>
+        <a id="next-page" data-href="horarios.html">Siguiente &nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right fa-round"></i></a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="localstorage.js"></script>
+    <script>
+        var dataa = localStorage.getItem("myDataa");
+        dataa = dataa.split(",");
+        if (dataa[2] != "disease") {
+            $(".fram4-content .flex-box .flex-col").each(function(){
+                if (dataa[2] == $($(this).find(".title")).text()) {
+                    var href = $("#next-page").attr("data-href");
+                    $("#next-page").attr("href",href)
+                    $(this).addClass("active");
+                }
+            })
+        }
+    </script>
+</body>
+</html>

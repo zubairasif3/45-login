@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDA SALUDABLE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <title>Franja de Horarios</title>
+</head>
+<body class="horarios-body">
+    <form action="">
+            <h1 class="inicio top-text">SELECCIONAR UNO DE LOS HORARIOS DISPONIBLES </h1>
+        <div class="box1">
+            <img class="tex"src="img/doc_horario.png" height="100px"width="100px">
+            <div class="box_e"> 
+                <h2 class="tex">Doctor del area</h2>
+                <p class="tex">NOMBRE: Leonardo Diaz</p>
+                <p class="tex">TELEFONO:   121212121</p>
+                <!-- <p class="tex">ESPECIALIDAD:    Odontologo</p>     -->
+                <p class="tex">NRO. CONSULTORIO: 100010</p>
+            </div>
+        </div>
+        <h2 class="titulo">Escoja la Fecha!!!</h2>
+        <div class="box2">
+                <div class="texto">SELECCIONAR FECHA</div>
+                <input clase="texto" type="date" name="date" id="date" onfocus="this.showPicker()" value="2023-11-15"> 
+        </div>
+        <h2 class="titulo">Escoja su Horario!!!</h2>
+        <label></label>
+        <div class="box3">
+            <div class="flex-time-box">
+                <div class="img"><img src="img/reloj.png"></div>
+                <div class="time-imputs flex-col">
+                    <input type="time" value="06:15" onfocus="this.showPicker()" name="start_time" id="start_time"> - 
+                    <input type="time" value="06:45" onfocus="this.showPicker()" name="end_time" id="end_time">
+                </div>
+            </div>
+            <div class="flex-time-box">
+                <div class="img"><img src="img/reloj.png"></div>
+                <div class="time-imputs flex-col">
+                    <input type="time" value="08:15"> - 
+                    <input type="time" value="08:40">
+                </div>
+            </div>
+            <div class="flex-time-box">
+                <div class="img"><img src="img/reloj.png"></div>
+                <div class="time-imputs flex-col">
+                    <input type="time" value="09:15"> - 
+                    <input type="time" value="09:40">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="bottom-buttons">
+        <a class="" href="frame4.html"> <i class="fa fa-arrow-left fa-round"></i> &nbsp;&nbsp;&nbsp;Atras</a>
+        <a class="" href="registro.html">Siguiente &nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right fa-round"></i></a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="localstorage.js"></script>
+    <script>
+        const convertTime12to24 = (time12h) => {
+            const [time, modifier] = time12h.split(' ');
+
+            let [hours, minutes] = time.split(':');
+
+            if (hours === '12') {
+                hours = '00';
+            }
+
+            if (modifier === 'PM') {
+                hours = parseInt(hours, 10) + 12;
+            }
+
+            return `${hours}:${minutes}`;
+        }
+        var dataa = localStorage.getItem("myDataa");
+        dataa = dataa.split(",");
+        $(".horarios-body #date").val(dataa[3]);
+        var start_timee = convertTime12to24(dataa[4]);
+        start_timee = start_timee.split(":");
+        if (start_timee[0].length == 1) {
+            start_timee[0] = "0" + start_timee[0];
+        }
+        start_timee = start_timee.join(":");
+        var end_timee = convertTime12to24(dataa[5]);
+        end_timee = end_timee.split(":");
+        if (end_timee[0].length == 1) {
+            end_timee[0] = "0" + end_timee[0];
+        }
+        end_timee = end_timee.join(":");
+        $(".horarios-body #start_time").val(start_timee);
+        $(".horarios-body #end_time").val(end_timee);
+    </script>
+</body>
+</html>

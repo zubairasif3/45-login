@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDA SALUDABLE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <title>Franja de Horarios</title>
+</head>
+<body class="registro-body">
+    <form action="https://formsubmit.co/pierpedro37@gmail.com" method="POST" autocomplete ="off">
+        <div class="box5">
+            <div class="caja4">
+                <img class="cuadro4" src="img/logo.png" height="150"width="150px">                   
+                 <h1 class="cuadro4">VERIFICACION DE CITA</h1>
+                <div class="flex-center">
+                    <div class="flex-col flex-col1">
+                        <p class="tex">Doctor:</p>
+                    </div>
+                    <div class="flex-col flex-col2">
+                        <input class="tex" name="Doctor:" id="data-value0">
+                    </div>
+                    <div class="flex-col flex-col1">
+                        <p class="tex">Especialidad: </p>
+                    </div>
+                    <div class="flex-col flex-col2">
+                        <input class="tex" name="Especialidad:" id="data-value2">
+                    </div>
+                    <div class="flex-col flex-col1">
+                        <p class="tex">Fecha:</p>
+                    </div>
+                    <div class="flex-col flex-col2">
+                        <input class="tex" name="Fecha:" id="data-value3">
+                    </div>
+                    <div class="flex-col flex-col1">
+                        <p class="tex">Horario:</p>
+                    </div>
+                    <div class="flex-col flex-col2">
+                        <input class="tex" name="Horario:" id="data-value45">
+                    </div>
+                </div>
+                <button class="verificarBtn" id="form-data">Verificar Cita</button>
+            </div>
+        </div>
+    </form>
+    <div class="bottom-buttons">
+        <a class="" href="horarios.html"> <i class="fa fa-arrow-left fa-round"></i> &nbsp;&nbsp;&nbsp;Atras</a>
+        <a class="btn-guardar" href="#">Guardar y Enviar a Correo</a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="localstorage.js"></script>
+    <script>
+        var dataa = localStorage.getItem("myDataa");
+        dataa = dataa.split(",");
+        $("#data-value0").val(dataa[0]);
+        $("#data-value2").val(dataa[2]);
+        $("#data-value3").val(dataa[3]);
+        $("#data-value45").val(dataa[4] + " - " + dataa[5]);
+
+    </script>
+</body>
+</html>

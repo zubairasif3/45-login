@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDA SALUDABLE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="frame3-body">
+    <form action="" class="frame3-form">
+        <div class="fram3-content">
+            <div class="flex-top">
+                <div class="flex-col">
+                    <div class="heading">Hola, Abel</div>
+                    <div class="top-text">
+                        Estamos listos para ayudarte a elegir las opciones de tu cita. ¡Comencemos!
+                    </div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame3/top.png"></div>
+                </div>
+            </div>
+            <div class="select-content">
+                <div class="select-div">
+                    <select name="seleccione" id="seleccione">
+                        <option value="">SELECCIONE UNA OPCION</option>
+                        <option value="">1. REGISTRO DE CITAS </option>
+                        <option value="">2. ANULAR CITA</option>
+                        <option value="">3. EMERGENCIA</option>
+                    </select>
+                </div>
+                <div class="select-div">
+                    <select name="opcion" id="opcion" required>
+                        <option value="">SELECCIONE UNA OPCION</option>
+                        <option value="REGISTRO DE CITAS">1. REGISTRO DE CITAS </option>
+                        <option value="">2. ANULAR CITA</option>
+                        <option value="">3. EMERGENCIA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex-bottom">
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame3/1.png"></div>
+                    <div class="title">Dental</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame3/2.png"></div>
+                    <div class="title">Doctor</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame3/3.png"></div>
+                    <div class="title">Lab</div>
+                </div>
+                <div class="flex-col">
+                    <div class="img"><img src="img/frame3/4.png"></div>
+                    <div class="title">Pharmacy</div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="bottom-buttons">
+        <a class="" href="#"> <i class="fa fa-arrow-left fa-round"></i> &nbsp;&nbsp;&nbsp;Atras</a>
+        <a id="next-page" data-href="frame4.html">Siguiente &nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right fa-round"></i></a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="localstorage.js"></script>
+    <script>
+        var dataa = localStorage.getItem("myDataa");
+        dataa = dataa.split(",");
+        if (dataa[1] != "opcion") {
+            $("#opcion option").each(function() {
+                if ($(this).val() == dataa[1]) {
+                    $(this).prop("selected",true);
+                    var href = $("#next-page").attr("data-href");
+                    $("#next-page").attr("href",href)
+                }
+            })
+        }
+    </script>
+</body>
+</html>
