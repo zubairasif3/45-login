@@ -177,8 +177,6 @@ $(function() {
           maxparse = parseInt(maxvalue);
           minvalue = $(".price-range-slidernew .tooltip-min .tooltip-inner").text().replace(/\$/g, "");
           minparse = parseInt(minvalue);
-          console.log(maxparse);
-          console.log(minparse);
           $("#slider-range-values").attr("min",minparse);
           $("#slider-range-values").attr("max",maxparse);
           applyFilter();
@@ -216,10 +214,54 @@ $(function() {
           maxparse = parseInt(maxvalue);
           minvalue = $(".price-range-slidernew1 .tooltip-min .tooltip-inner").text().replace(/\$/g, "");
           minparse = parseInt(minvalue);
-          console.log(maxparse);
-          console.log(minparse);
           $("#slider-range-values").attr("min",minparse);
           $("#slider-range-values").attr("max",maxparse);
+          applyFilter();
+      });
+
+      //Onchange function checkbox on/off
+    });
+    $('#YearRangeNew1').each(function() {
+      var slidervalue = $(this).attr('data-slider-value');
+      var separator = slidervalue.indexOf(',');
+      if (separator !== -1) {
+          slidervalue = slidervalue.split(',');
+          slidervalue.forEach(function(item, i, arr) {
+              arr[i] = parseFloat(item);
+          });
+      } else {
+          slidervalue = parseFloat(slidervalue);
+      }
+      $(this).slider({
+          formatter: function(slidervalue) {
+            return '$' + slidervalue;
+          },
+          slideStart: function(){
+            console.log(124323);
+          },
+          min: parseFloat($(this).attr('data-slider-min')),
+          max: parseFloat($(this).attr('data-slider-max')),
+          range: $(this).attr('data-slider-range'),
+          value: slidervalue,
+          tooltip_split: $(this).attr('data-slider-tooltip_split'),
+          tooltip: $(this).attr('data-slider-tooltip'),
+          tooltip_position: 'bottom'
+      }).on('slide', function(ev){
+        console.log(ev);
+        console.log(ev.value[1] - ev.value[0]);
+        if(ev.value[1] - ev.value[0] < 100){
+          $('#YearRangeNew1').slideStop();
+        }
+        // ev.slideStop();
+      });
+
+      $("#YearRangeNew1").on('change', function() {
+          var maxvalue = $(".price-range-slidernew .tooltip-max .tooltip-inner").text().replace(/\$/g, "");
+          maxparse = parseInt(maxvalue);
+          minvalue = $(".price-range-slidernew .tooltip-min .tooltip-inner").text().replace(/\$/g, "");
+          minparse = parseInt(minvalue);
+          $("#slider-rangeYear-values").attr("min",minparse);
+          $("#slider-rangeYear-values").attr("max",maxparse);
           applyFilter();
       });
 

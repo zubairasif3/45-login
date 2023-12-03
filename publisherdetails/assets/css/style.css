@@ -2736,3 +2736,24 @@ font-size: 18px;
         gap: 140px;
     }
 }
+
+/* mobile year range */
+.slider-rangeYear1{
+    position: relative;
+    background-color: #ffdef0 !important;
+}
+.slider-rangeYear1 .slider.slider-horizontal{
+    top: -7px;
+}
+.slider-rangeYear1 .slider-gaia .slider-horizontal .slider-track{
+    height: 0px !important;
+}
+.slider-rangeYear1 .slider-gaia .slider-track-low,
+.slider-rangeYear1 .slider-gaia .slider-track-high{
+    background: transparent !important;
+    border: 0px !important;
+}
+.slider-rangeYear1 .slider.slider-horizontal .slider-tick,
+.slider-rangeYear1 .slider.slider-horizontal .slider-handle{
+    z-index: 1000;
+}

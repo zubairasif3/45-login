@@ -46,7 +46,6 @@ $(".alphabet-section-text3 a").click(function(){
 
 $(".form-switch").click(function() {
   applyFilter();
-  console.log("sadasd");
 })
 
 
@@ -59,10 +58,6 @@ function applyFilter(){
   var slider_range_values_max = $("#slider-range-values").attr("max");
   var slider_rangeYear_values_min = $("#slider-rangeYear-values").attr("min");
   var slider_rangeYear_values_max = $("#slider-rangeYear-values").attr("max");
-  console.log(slider_range_values_min);
-  console.log(slider_range_values_max);
-  console.log(slider_rangeYear_values_min);
-  console.log(slider_rangeYear_values_max);
   $("#pagingBox .data-filter").addClass("d-none");
   // selected filter apply
   if ($("#selectedCheckboxes").children().length == 0 ) {
